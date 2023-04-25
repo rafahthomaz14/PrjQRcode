@@ -17,4 +17,5 @@
         }
         
         //sistema Gerador de QRCode c# - Duas textBox e dois Buttons
+        //using ZXing;
         
