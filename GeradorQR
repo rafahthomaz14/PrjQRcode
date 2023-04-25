@@ -1,0 +1,20 @@
+  private void btnGerarQRCode_Click(object sender, EventArgs e)
+        {
+            string qrData = tbxQrImageData.Text;
+            string qrImageFileName = tbxQrImageFileName.Text;
+
+            BarcodeWriter barcodew = new BarcodeWeiter();
+            barcodew.Format = BarcodeFormat.QR_CODE;
+            barcodew.Write(qrData).Save(@"C:\qr\" + qrImageFileName + ".png");
+            pbxQrImage.Image = Image.FromFile(@"c:\qr\" + qrImageFileName + ".png");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tbxQrImageData.Clear();
+            tbxQrImageFileName.Clear();
+            pbxQrImage.Image = null;
+        }
+        
+        //sistema Gerador de QRCode c# - Duas textBox e dois Buttons
+        
